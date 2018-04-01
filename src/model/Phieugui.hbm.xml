@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-Apr-2018 15:38:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Phieugui" table="phieugui" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idphieuGui" type="string">
+            <column name="IDPhieuGui" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="idsoTk" type="string">
+            <column name="IDSoTK" length="10" not-null="true">
+                <comment>M&#227; s? ti?t ki?m</comment>
+            </column>
+        </property>
+        <property name="soTienGui" type="float">
+            <column name="SoTienGui" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="ngayGui" type="date">
+            <column name="NgayGui" length="10" not-null="true" />
+        </property>
+        <property name="nguoiGuiTien" type="string">
+            <column name="NguoiGuiTien" length="50" not-null="true">
+                <comment>Ng??i g?i thay</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-Apr-2018 15:38:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Loaitietkiem" table="loaitietkiem" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idloaiTietKiem" type="int">
+            <column name="IDLoaiTietKiem" />
+            <generator class="assigned" />
+        </id>
+        <property name="tenLtk" type="string">
+            <column name="TenLTK" length="45" not-null="true">
+                <comment>T&#234;n lo?i ti?t ki?m</comment>
+            </column>
+        </property>
+        <property name="soNgayRut" type="int">
+            <column name="SoNgayRut" not-null="true">
+                <comment>S? ng&#224;y ???c r&#250;t ti?n</comment>
+            </column>
+        </property>
+        <property name="laiSuat" type="float">
+            <column name="LaiSuat" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="laiSuatTruocHan" type="string">
+            <column name="LaiSuatTruocHan" length="45" />
+        </property>
+        <property name="kyHan" type="string">
+            <column name="KyHan" length="45" not-null="true">
+                <comment>??n v? th&#225;ng</comment>
+            </column>
+        </property>
+        <property name="guiThem" type="java.lang.Boolean">
+            <column name="GuiThem">
+                <comment>G?i th&#234;m - ch? ?? kh&#244;ng th?i h?n</comment>
+            </column>
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="IsActive" not-null="true" />
+        </property>
+        <property name="idthamSo" type="string">
+            <column name="IDThamSo" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-Apr-2018 15:38:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Sotietkiem" table="sotietkiem" catalog="sotietkiem" optimistic-lock="version">
+        <id name="idstk" type="string">
+            <column name="IDSTK" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="soTienGuiTk" type="float">
+            <column name="SoTienGuiTK" precision="12" scale="0" not-null="true">
+                <comment>S? ti?n g?i ban ??u</comment>
+            </column>
+        </property>
+        <property name="ngayMo" type="date">
+            <column name="NgayMo" length="10" not-null="true">
+                <comment>'Ng&#224;y m? s?'</comment>
+            </column>
+        </property>
+        <property name="dongSo" type="boolean">
+            <column name="DongSo" not-null="true">
+                <comment>'Ki?m tra s? ?&#227; ?&#243;ng hay ch?a'</comment>
+            </column>
+        </property>
+        <property name="idkh" type="string">
+            <column name="IDKH" length="10" not-null="true">
+                <comment>'M&#227; kh&#225;ch h&#224;ng'</comment>
+            </column>
+        </property>
+        <property name="idloaiTien" type="string">
+            <column name="IDLoaiTien" length="5" not-null="true">
+                <comment>'M&#227; lo?i ti?n'</comment>
+            </column>
+        </property>
+        <property name="idloaiTietKiem" type="int">
+            <column name="IDLoaiTietKiem" not-null="true">
+                <comment>'M&#227; lo?i ti?t ki?m'</comment>
+            </column>
+        </property>
+        <property name="ngayTinhLai" type="date">
+            <column name="NgayTinhLai" length="10">
+                <comment>Ng&#224;y t&#237;nh l&#227;i su?t</comment>
+            </column>
+        </property>
+        <property name="ngayDenHan" type="date">
+            <column name="NgayDenHan" length="10">
+                <comment>Ng&#224;y ??n h?n r&#250;t l&#227;i</comment>
+            </column>
+        </property>
+        <property name="tongTien" type="float">
+            <column name="TongTien" precision="12" scale="0" not-null="true">
+                <comment>T?ng l&#227;i su?t + g?c</comment>
+            </column>
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="IsActive" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
