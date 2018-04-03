@@ -1,11 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SoTietKiemController">
-    
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SoTietKiemController">
+   <children>
+      <GridPane hgap="10.0" style="-fx-background-color: azure;" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" prefWidth="439.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Mã Sổ Tiết Kiệm">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Số tiền gửi tiết kiệm" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Ngày Mở" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Loại tiền" GridPane.columnIndex="2" />
+            <Label text="Loại tiết kiệm" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Ngày tính lãi" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Đóng sổ" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Ngày đến hạn" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" promptText="Nhập mã  sổ tiết kiệm..." GridPane.columnIndex="1" />
+            <TextField fx:id="txtDiaChi" prefHeight="25.0" prefWidth="302.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtTenKH" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" text="Mã Khách Hàng" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Tổng tiền" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <opaqueInsets>
+                  <Insets left="5.0" />
+               </opaqueInsets>
+            </Label>
+            <TextField prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField prefHeight="25.0" prefWidth="306.0" GridPane.columnIndex="3" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="94.0" prefWidth="1200.0" spacing="12.0">
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveKhachhang" prefHeight="50.0" prefWidth="80.0" text="Lưu" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteKhachhangAction" prefHeight="50.0" prefWidth="80.0" text="Xóa" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetKhachhangAction" prefHeight="50.0" prefWidth="80.0" text="Làm mới" />
+         </children>
+      </HBox>
+      <TableView fx:id="tbKhachhang" prefHeight="372.0" prefWidth="1007.0">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>
